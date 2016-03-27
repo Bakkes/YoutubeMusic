@@ -13,7 +13,7 @@ SPOTIPY_REDIRECT_URI = parser.get('spotipy', 'redirect_uri')
 SPOTIFY_USER = parser.get('spotify', 'user')
 SPOTIFY_SCOPE = 'playlist-modify-public'
 
-CLIENT_SECRETS_FILE = parser.get('youtube', 'secrets_file')
+CLIENT_SECRETS_FILE = os.path.join(CURRENT_PATH, parser.get('youtube', 'secrets_file'))
 YOUTUBE_READ_WRITE_SCOPE = "https://www.googleapis.com/auth/youtube"
 YOUTUBE_API_SERVICE_NAME = "youtube"
 YOUTUBE_API_VERSION = "v3"
