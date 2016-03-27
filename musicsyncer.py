@@ -284,7 +284,7 @@ def download_new_song():
     queued_download = session.query(Download).filter_by(completed=False).first()
     if queued_download is None:
         return False
-    filename = "unicode(%(title)s).%(ext)s"
+    filename = "%(title)s.%(ext)s"
 
     #
     spot_song = None
