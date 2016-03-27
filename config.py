@@ -1,7 +1,10 @@
 from ConfigParser import SafeConfigParser
+import os
+
+CURRENT_PATH = os.path.dirname(os.path.abspath(__file__))
 
 parser = SafeConfigParser()
-parser.read('config.ini')
+parser.read(os.path.join(CURRENT_PATH, 'config.ini'))
 
 SPOTIPY_CLIENT_ID = parser.get('spotipy', 'client_id')
 SPOTIPY_CLIENT_SECRET = parser.get('spotipy', 'client_secret')

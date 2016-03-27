@@ -26,7 +26,7 @@ flow = flow_from_clientsecrets(CLIENT_SECRETS_FILE,
   message="No client secrets",
   scope=YOUTUBE_READ_WRITE_SCOPE)
 
-storage = Storage("%s-oauth2.json" % "stored")
+storage = Storage(os.path.join(CURRENT_PATH, "%s-oauth2.json" % "stored"))
 credentials = storage.get()
 
 if credentials is None or credentials.invalid:
