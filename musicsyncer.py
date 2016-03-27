@@ -12,8 +12,7 @@ import httplib2
 import re
 import os
 import eyed3
-from subprocess import call
-from main import parser
+
 from apiclient.discovery import build
 from apiclient.errors import HttpError
 from oauth2client.client import flow_from_clientsecrets
