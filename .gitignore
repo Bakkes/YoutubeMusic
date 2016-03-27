@@ -35,3 +35,4 @@ cache/**
 config.ini
 client_secrets.json
 stored-oauth2.json
+*.pyc
