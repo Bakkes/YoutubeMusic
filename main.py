@@ -9,6 +9,8 @@ import database
 import musicsyncer
 import argparse
 
+parser = None
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Syncs youtube playlists with spotify automatically")
     parser.add_argument("--drop", help="Refreshes the DB", action='store_true')

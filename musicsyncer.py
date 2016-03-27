@@ -13,7 +13,7 @@ import re
 import os
 import eyed3
 from subprocess import call
-
+from main import parser
 from apiclient.discovery import build
 from apiclient.errors import HttpError
 from oauth2client.client import flow_from_clientsecrets
@@ -30,7 +30,7 @@ storage = Storage("%s-oauth2.json" % "stored")
 credentials = storage.get()
 
 if credentials is None or credentials.invalid:
-    credentials = run_flow(flow, storage)
+    credentials = run_flow(flow, storage, parser)
 
 __youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION,
   http=credentials.authorize(httplib2.Http()))
