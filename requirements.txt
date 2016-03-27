@@ -1,0 +1,5 @@
+youtube-dl
+google-api-python-client
+sqlalchemy
+spotipy
+eyeD3
