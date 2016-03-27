@@ -30,7 +30,7 @@ storage = Storage("%s-oauth2.json" % "stored")
 credentials = storage.get()
 
 if credentials is None or credentials.invalid:
-    credentials = run_flow(flow, storage, parser)
+    credentials = run_flow(flow, storage)
 
 __youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION,
   http=credentials.authorize(httplib2.Http()))

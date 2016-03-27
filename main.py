@@ -7,12 +7,10 @@ import subprocess
 import config
 import database
 import musicsyncer
-import argparse
-
-parser = None
+from oauth2client.tools import argparser as parser
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Syncs youtube playlists with spotify automatically")
+    #parser = argparse.ArgumentParser(description="Syncs youtube playlists with spotify automatically")
     parser.add_argument("--drop", help="Refreshes the DB", action='store_true')
     parser.add_argument("--addyoutube", help="Adds youtube playlist", default=None)
     parser.add_argument("--addspotify", help="Adds youtube playlist", default=None)
