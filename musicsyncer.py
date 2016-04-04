@@ -108,6 +108,7 @@ def add_youtube_playlist(playlist_id):
     
     
 def cheapen_name(name, stage):
+    name = name.replace("lyrics", "")
     if stage == 0:
         return name
     if stage == 1:
